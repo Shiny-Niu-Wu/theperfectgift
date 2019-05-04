@@ -37,9 +37,9 @@ function preload() {
   closeButton = loadImage('closeButton.png');
 
   for (let i = 0; i < 3; i++) {
-    ads.fake[i] = loadImage('fake/fake_' + i + '.png');
-    ads.real[i] = loadImage('real/real_' + i + '.png');
-    ads.comment[i] = loadImage('comment/comment_' + i + '.png');
+    ads.fake[i] = loadImage('fake/fake_' + 1 + '.png');
+    ads.real[i] = loadImage('real/real_' + 1 + '.png');
+    ads.comment[i] = loadImage('comment/comment_' + 1 + '.png');
   }
 
   textAd = loadImage('text_ad-1.png');
