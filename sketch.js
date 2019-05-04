@@ -36,10 +36,10 @@ let toBeClosed = false;
 function preload() {
   closeButton = loadImage('closeButton.png');
 
-  for (let i = 0; i < 3; i++) {
-    ads.fake[i] = loadImage('fake/fake_' + 1 + '.png');
-    ads.real[i] = loadImage('real/real_' + 1 + '.png');
-    ads.comment[i] = loadImage('comment/comment_' + 1 + '.png');
+  for (let i = 0; i < 5; i++) {
+    ads.fake[i] = loadImage('fake/fake_' + i + '.png');
+    ads.real[i] = loadImage('real/real_' + i + '.png');
+    ads.comment[i] = loadImage('comment/comment_' + i + '.png');
   }
 
   textAd = loadImage('text_ad-1.png');
@@ -150,7 +150,6 @@ function trackViewerShape() {
   ads.real[index].loadPixels();
   // console.log(noseY);
 
-
   //distance will always be a circle of countless points at an identiical distance
   for (let y = int(noseY) - size; y < int(noseY) + size; y++) {
     for (let x = int(noseX) - size; x < int(noseX) + size; x++) {
@@ -168,9 +167,9 @@ function trackViewerShape() {
   ads.real[index].updatePixels();
   extraCanvas.updatePixels();
 
-  push();
+  //push();
   translate(ads.real[0].width, 0);
   scale(-1, 1);
   image(extraCanvas, 0, 0);
-  pop();
+  //pop();
 }
