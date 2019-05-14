@@ -46,7 +46,10 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(ads.real[0].width, ads.real[0].height);
+  var canvas = createCanvas(ads.real[0].width, ads.real[0].height);
+  //canvas.parent('sketch-div');
+
+  //createCanvas(ads.real[0].width, ads.real[0].height);
 
   noStroke();
 
